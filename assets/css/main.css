@@ -14,6 +14,7 @@ body{
 				 linear-gradient(50deg,#ff4169,#7c26f8);
 	background-attachment: fixed;
 	font-family: Helvetica,Arial,sans-serif;
+	overflow-x: hidden;
 }
  		
 
@@ -89,6 +90,28 @@ nav.navbar-transparent{
 	color: white;
 }
 
+/* -- Services -- */
+#services{
+	background-color: white;
+	padding: 20px 0;
+}
+
+.row-album{
+	padding: 10px 0;
+}
+
+/* -- Features-- */
+#features{
+	padding: 20px 0;
+}
+
+.rotate{
+	-ms-transform: rotate(30deg); /* IE 9 */
+	-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+	transform: rotate(30deg);
+	padding-left: 80px;
+}
+
 /* ============== Fonts ==============  */
 
 h1{
@@ -96,4 +119,27 @@ h1{
 	font-weight: 900;
 	letter-spacing: -0.05em;
 	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+#services h2, #services h3{
+	color: #7c25f8;
+}
+
+#features h2,#features p{
+	color: white;
+}
+#features h3{
+	color: #9bf0e1;
 }
