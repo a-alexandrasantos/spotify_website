@@ -7,6 +7,7 @@
 /* ============== Layout ==============  */
 html,body, .hero{
 	height: 100vh;
+	overflow: auto;
 }
 body{
 	background: url('../../assets/img/hero.png') ,
@@ -16,7 +17,6 @@ body{
 	font-family: Helvetica,Arial,sans-serif;
 	overflow-x: hidden;
 }
- 		
 
 /* -- Header -- */
 .img-logo{
@@ -35,11 +35,12 @@ nav.navbar-transparent{
 	padding: 15px 0;
 	background: rgba(0,0,0,0.6);
 }
-.navbar-inverse .navbar-nav>li>a{
+.navbar-inverse .navbar-nav>li>a,footer .nav a{
 	color: white;
 }
-.navbar-inverse .navbar-nav>li>a:hover{
+.navbar-inverse .navbar-nav>li>a:hover,footer .nav a:hover{
 	color: #9bf0e1;
+	background: none;
 }
 .divisor{
 	width: 1px;
@@ -66,11 +67,25 @@ nav.navbar-transparent{
 	border-radius: 500px;
 	-webkit-border-radius:500px;
 	-moz-border-radius: 500px;
-	padding: 10px 35px;
 	text-transform: uppercase;
 	font-weight: 900;
-	margin: 0px 15px;
 	transition: background .4s, color .4s;
+	padding: 10px 35px;
+}
+
+/* xs < 767 */
+@media screen and (max-width: 767px){
+	.btn-custom{
+		margin: 10px 15px;
+		font-size: 16px;
+	}
+}
+/* sm > 768 */
+@media screen and (min-width: 768px){
+	.btn-custom{
+		margin: 0px 15px;
+		font-size: 16px;
+	}
 }
 
 .btn-white{
@@ -100,6 +115,15 @@ nav.navbar-transparent{
 	padding: 10px 0;
 }
 
+@media screen and (max-width: 767px){
+	.row-album{
+		padding: 0;
+	}
+	.row-album img{
+		padding: 20px 0;
+	}
+}
+ 
 /* -- Features-- */
 #features{
 	padding: 20px 0;
@@ -112,25 +136,139 @@ nav.navbar-transparent{
 	padding-left: 80px;
 }
 
+/* -- Footer -- */
+footer{
+	background-color: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.list-social-icons{
+	float: right;
+}
+
+@media screen and (max-width: 767px){
+	.list-social-icons{
+		float: left;
+	}
+}
+.list-social-icons::after{
+	clear: both;
+}
+
 /* ============== Fonts ==============  */
 
 h1{
-	font-size: 100px;
 	font-weight: 900;
 	letter-spacing: -0.05em;
 	margin-bottom: 50px;
 }
 
+/* xs < 767 */
+@media screen and (max-width: 767px){
+	h1{
+		font-size: 50px;
+	}
+}
+/* sm */
+@media screen and (min-width: 768px){
+    h1{
+		font-size: 70px;
+	}
+}
+/* md */
+@media screen and (min-width: 992px){
+    h1{
+		font-size: 80px;
+	}
+}
+/* lg */
+@media screen and (min-width: 1200px){
+    h1{
+		font-size: 100px;
+	}
+}
+
 h2{
-	font-size: 50px;
 	font-weight: 700;
 	letter-spacing: -0.04em;
 }
 
+@media screen and (max-width: 767px){
+	h2{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 767px){
+	h2{
+		font-size: 35px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	h2{
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	h2{
+		font-size: 50px;
+	}
+}
+
 h3 {
-	font-size: 35px;
 	font-weight: 700;
 	letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 767px){
+	h3{
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 767px){
+	h3{
+		font-size: 25px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	h3{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	h3{
+		font-size: 35px;
+	}
+}
+
+footer h4{
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px){
+	footer .img-logo{
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	footer .img-logo{
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+		footer .nav>li>a>img{
+		max-width: 40px!important;
+	}
 }
 
 #services h2, #services h3{
